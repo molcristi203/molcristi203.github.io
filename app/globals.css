@@ -6,6 +6,10 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --bh-blue: #0071E4;
+  --bh-red: #f5363c;
+  --bh-yelow: #fec527;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,17 +21,75 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: white;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.bh-red {
+  background-color: var(--bh-red);
+}
+
+.bh-blue {
+  background-color: var(--bh-blue);
+}
+
+.bh-yellow {
+  background-color: var(--bh-yelow);
+}
+
+/* .custom-grid {
+  --gap: 0px;
+  --line-offset: calc(var(--gap) / 2);
+  --line-thickness: 2px;
+  --line-color: rgb(0, 0, 0);
+  overflow: hidden;
+  gap: var(--gap);
+}
+
+.custom-elem {
+  position: relative;
+}
+
+.custom-elem::before, .custom-elem::after {
+  content: '';
+  position: absolute;
+  background-color: var(--line-color);
+  z-index: 1;
+}
+
+.custom-elem::after {
+  inline-size: 100%;
+  block-size: var(--line-thickness);
+  inset-inline-start: 0;
+  inset-block-start: calc(var(--line-offset) * -1);
+}
+
+.custom-elem::before {
+  inline-size: var(--line-thickness);
+  block-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: calc(var(--line-offset) * -1);
+} */
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  background-color: black;
+  gap: 2px;
+  grid-auto-flow: dense;
+  position: relative;
+}
+
+.custom-grid > * {
+  background-color: white;
+  position: relative;
+}
+
+.nav-text {
+  -webkit-text-stroke: 1px black;
 }
