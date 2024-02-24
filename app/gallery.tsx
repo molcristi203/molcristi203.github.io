@@ -10,7 +10,7 @@ interface GalleryProps {
 
 export default function Gallery({folder} : GalleryProps) {
     const [paths, setPaths] = useState<string[]>([]);
-    const [image, setImage] = useState("");
+    const [image, setImage] = useState("data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=");
     const [video, setVideo] = useState("");
     const [visible, setVisible] = useState("none");   
     const videoRef = useRef<HTMLVideoElement>(null);                                                                                           
@@ -29,7 +29,6 @@ export default function Gallery({folder} : GalleryProps) {
     }, [folder]);
 
     function changeImage(img : string) {
-        console.log(img);
         if (path.extname(img).toLowerCase() === ".mp4") {
             setVisible("video");
             setVideo(img);
@@ -46,13 +45,13 @@ export default function Gallery({folder} : GalleryProps) {
 
     return (
         <div className="flex flex-col">
-            <div className="flex overflow-x-auto">
+            <div className="flex overflow-x-auto border-b-2 border-black">
             {
                 paths.map((image, index) => {
                     let extension = path.extname(image).toLowerCase();
                     let new_path = "/" + image.replace(/\\/g, "/");
                     if (extension === ".jpg" || extension === ".png" || extension === ".jpeg") {
-                        return (<div key={index} className="w-60 h-60 border-black border-r-2 last:border-r-0 cursor-pointer opacity-75 hover:opacity-100">
+                        return (<div key={index} className="lg:min-w-60 md:min-w-60 md:h-60 lg:h-60 sm:min-w-80 sm:h-80 min-w-40 h-40 border-black border-r-2 last:border-r-0 cursor-pointer opacity-75 hover:opacity-100">
                             <Image
                                 src={new_path}
                                 width={2000}
@@ -63,7 +62,7 @@ export default function Gallery({folder} : GalleryProps) {
                             />
                         </div>);
                     } else {
-                        return (<div key={index} className="w-60 h-60 border-black border-r-2 last:border-r-0 cursor-pointer opacity-75 hover:opacity-100">
+                        return (<div key={index} className="lg:min-w-60 lg:h-60 md:min-w-60 md:h-60 sm:min-w-80 sm:h-60 min-w-40 h-40 border-black border-r-2 last:border-r-0 cursor-pointer opacity-75 hover:opacity-100">
                             <video className="w-full h-full object-scale-down" onClick={() => {changeImage(new_path)}}>
                                 <source src={new_path} type="video/mp4"/>
                             </video>
@@ -72,7 +71,7 @@ export default function Gallery({folder} : GalleryProps) {
                 })
             }
             </div>
-            <div className={`w-full h-screen border-black border-t-2 ${visible === "image" ? "block" : "hidden"}`}>
+            <div className={`w-full h-screen border-black border-b-2 ${visible === "image" ? "block" : "hidden"}`}>
                 <Image
                     src={image}
                     width={2000}
@@ -81,7 +80,7 @@ export default function Gallery({folder} : GalleryProps) {
                     className="w-full h-full object-scale-down"
                 />
             </div>
-            <div className={`w-full h-screen border-black border-t-2 ${visible === "video" ? "block" : "hidden"}`}>
+            <div className={`w-full h-screen border-black border-b-2 ${visible === "video" ? "block" : "hidden"}`}>
                 <video controls className="w-full h-full" preload="auto" muted ref={videoRef}>
                     <source src={video} type="video/mp4" />
                     Your browser does not support the video tag.

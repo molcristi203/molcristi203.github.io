@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { blippo } from "./fonts";
+import { lobster } from "./fonts";
 import Banner from "./banner";
 
 export const metadata: Metadata = {
@@ -15,13 +15,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${blippo.variable} font-sans antialiased`}>
+      <body className={`${lobster.className} antialiased`}>
         <Banner/>
         {children}
-        <div className="bh-yellow h-14 border-t-2 border-black flex flex-row gap-8 p-8 items-center text-white text-2xl">
-          <a href="https://www.linkedin.com/in/cristi-moldovan-8a199026b" target="_blank">LinkedIn</a>
-          <a href="https://github.com/molcristi203" target="_blank">GitHub</a>
-          <a href="https://www.artstation.com/molcristi" target="_blank">ArtStation</a>
+        <div className="bh-yellow lg:h-28 md:h-28 sm:h-28 h-14 border-b-2 border-black">
         </div>
       </body>
     </html>

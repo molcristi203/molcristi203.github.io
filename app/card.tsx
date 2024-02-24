@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { blippo } from "./fonts";
 
 interface CardProps {
     title? : string;
@@ -16,9 +17,9 @@ export function Card({ title, image_path, link } : CardProps) {
                     width={2000}
                     height={2000}
                     alt="Placeholder"
-                    className="w-full object-scale-down h-96"
+                    className="w-full object-scale-down lg:h-[25vw] md:h-[50vw] sm:h-[100vw] h-[100vw]"
                 />
-                <h2 className="text-3xl p-2">{title ? title : ""}</h2>
+                <h2 className={`lg:text-3xl md:text-2xl sm:text-3xl p-2 ${blippo.variable} font-sans antialiased`}>{title ? title : ""}</h2>
             </div>
         </Link>    
     );

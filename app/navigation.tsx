@@ -27,7 +27,7 @@ export default function Navigation({elements} : NavProps) {
     }, []);
 
     return (
-        <nav className="fixed right-4 top-[12.5%] w-[1%] h-3/4 bg-white border-black border-2">
+        <nav className="fixed right-4 top-[12.5%] sm:w-[1%] w-[2%] h-3/4 bg-white border-black border-2">
             {elements.map((element : HTMLElement, index) => {
                 const elementTop = element.getBoundingClientRect().top;
                 const winScroll = document.documentElement.scrollTop;
@@ -36,8 +36,8 @@ export default function Navigation({elements} : NavProps) {
                 const scrolledPercent = (scrolled / height) * 100;
                 const navname = element.getAttribute("data-navname")
                 return (
-                    <div key={index} style={{top: `${scrolledPercent}%`}} className="absolute left-0 z-[3] w-full h-0.5 border-b-2 border-black">
-                        <p className="absolute right-4 text-[#E51A33] nav-text text-2xl cursor-pointer" onClick={() => {
+                    <div key={index} style={{top: `${scrolledPercent}%`}} className="absolute left-0 z-[3] w-full border-b-2 border-black">
+                        <p className="absolute right-4 text-[#fec527] nav-text lg:text-2xl lg:top-[-1rem] md:text-xl md:top-[-1rem] sm:text-xl sm:top-[-1rem] text-md top-[-1rem] cursor-pointer" onClick={() => {
                             window.scrollTo({
                                 top: scrolled,
                                 behavior: "smooth"
@@ -47,7 +47,7 @@ export default function Navigation({elements} : NavProps) {
                 );
             })}
 
-            <div style={{height: `${fill}%`}} className="w-full bg-[#E51A33] relative z-[2]">
+            <div style={{height: `${fill}%`}} className="w-full bg-[#fec527] relative z-[2]">
 
             </div>      
         </nav>
