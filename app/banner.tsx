@@ -19,7 +19,7 @@ export default function Banner() {
     return (
     <div className="w-full h-screen box-content border-b-2 border-black">
       <Image 
-        src="/molcristi203.github.io/banner.png"
+        src="molcristi203.github.io/banner.png"
         width={2000}
         height={2000}
         alt="Banner picture"
