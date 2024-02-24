@@ -4,7 +4,6 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
     output: "export",
-    basePath: "/molcristi203.github.io",
     images: {
         unoptimized: true
     },
