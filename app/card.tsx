@@ -13,7 +13,7 @@ export function Card({ title, image_path, link } : CardProps) {
         <Link href={link ? link : "#"} scroll={true} className="bg-white">
             <div className="flex flex-col items-center">
                 <Image
-                    src={ image_path ? image_path : '/molcristi203.github.io/placeholder_image.jpg' }
+                    src={ image_path ? image_path : 'molcristi203.github.io/placeholder_image.jpg' }
                     width={2000}
                     height={2000}
                     alt="Placeholder"
