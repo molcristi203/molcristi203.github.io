@@ -23,12 +23,12 @@ export default function Home() {
       <SectionTitle ref={el => el && elements.current.push(el)} title="Projects" backButton={false}/>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 bg-black gap-0.5 border-b-2 border-black">
         <Card title="Protfolio" image_path="/banner.png" link="/"/>
-        <Card title="Robotic Arm" image_path="/images/robotic_arm/robot.jpg" link="molcristi203.github.io/robotarm" />
-        <Card title="Car Sales App" image_path="/images/car_sales/1.png" link="molcristi203.github.io/carsales"/>
-        <Card title="Train Ticket Vending Machine" image_path="/images/ticket_vending/nexys2-0.png" link="molcristi203.github.io/ticketvending"/>
-        <Card title="AmongFOL" image_path="/images/amongfol/among1.png" link="molcristi203.github.io/amongfol"/>
-        <Card title="OpenGL App" image_path="/images/opengl/1.png" link="molcristi203.github.io/opengl"/>
-        <Card title="Benchmarking App" image_path="/images/benchmark/1.png" link="molcristi203.github.io/benchmark"/>
+        <Card title="Robotic Arm" image_path="/images/robotic_arm/robot.jpg" link="/robotarm" />
+        <Card title="Car Sales App" image_path="/images/car_sales/1.png" link="/carsales"/>
+        <Card title="Train Ticket Vending Machine" image_path="/images/ticket_vending/nexys2-0.png" link="/ticketvending"/>
+        <Card title="AmongFOL" image_path="/images/amongfol/among1.png" link="/amongfol"/>
+        <Card title="OpenGL App" image_path="/images/opengl/1.png" link="/opengl"/>
+        <Card title="Benchmarking App" image_path="/images/benchmark/1.png" link="/benchmark"/>
         <div className="w-full h-full bg-white lg:col-span-1 md:col-span-1 lg:block md:block sm:hidden hidden"></div>
       </div>
       <Navigation elements={elements.current}/>
