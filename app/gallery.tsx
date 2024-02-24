@@ -49,7 +49,7 @@ export default function Gallery({folder} : GalleryProps) {
             {
                 paths.map((image, index) => {
                     let extension = path.extname(image).toLowerCase();
-                    let new_path = "/" + image.replace(/\\/g, "/");
+                    let new_path = "/molcristi203.github.io/" + image.replace(/\\/g, "/");
                     if (extension === ".jpg" || extension === ".png" || extension === ".jpeg") {
                         return (<div key={index} className="lg:min-w-60 md:min-w-60 md:h-60 lg:h-60 sm:min-w-80 sm:h-80 min-w-40 h-40 border-black border-r-2 last:border-r-0 cursor-pointer opacity-75 hover:opacity-100">
                             <Image
