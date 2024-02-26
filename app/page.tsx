@@ -22,7 +22,7 @@ export default function Home() {
         </div>
       <SectionTitle ref={el => el && elements.current.push(el)} title="Projects" backButton={false}/>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 bg-black gap-0.5 border-b-2 border-black">
-        <Card title="Protfolio" image_path="/banner.png" link="/"/>
+        <Card title="Portfolio" image_path="/banner.png" link="/"/>
         <Card title="Robotic Arm" image_path="/images/robotic_arm/robot.jpg" link="/robotarm" />
         <Card title="Car Sales App" image_path="/images/car_sales/1.png" link="/carsales"/>
         <Card title="Train Ticket Vending Machine" image_path="/images/ticket_vending/nexys2-0.png" link="/ticketvending"/>
