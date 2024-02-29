@@ -1,6 +1,5 @@
 import SectionTitle from "@/app/section_title";
 import Section from "@/app/section"
-import SectionRev from "@/app/section_rev";
 import Gallery from "@/app/gallery";
 
 export default function CarSales() {
