@@ -4,7 +4,7 @@ import { lobster } from "./fonts";
 import Banner from "./banner";
 
 export const metadata: Metadata = {
-  title: "Portofoliu"
+  title: "Portfolio"
 };
 
 export default function RootLayout({
