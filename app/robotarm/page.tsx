@@ -24,6 +24,7 @@ export default function RobotArm() {
                     height={2000}
                     alt="Robotic arm"
                     className="h-full object-scale-down"
+                    key={3}
                 />
             ]}/>
             <Section left={[
@@ -33,9 +34,10 @@ export default function RobotArm() {
                     height={2000}
                     alt="App"
                     className="h-full object-scale-down"
+                    key={4}
                 />
             ]} right={[
-                <p>The app makes use of 6 sliders that can be used to control the 6 joints of the arm, an illustration is provided to show which joint is actioned by the sliders.<br/> For the making of this app, Android Studio was used and the app was exported as an apk so it can be run on smartphones.</p>
+                <p key={5}>The app makes use of 6 sliders that can be used to control the 6 joints of the arm, an illustration is provided to show which joint is actioned by the sliders.<br/> For the making of this app, Android Studio was used and the app was exported as an apk so it can be run on smartphones.</p>
             ]} reverse={true}/>
             <Gallery paths={["/images/robotic_arm/robot.jpg", "/images/robotic_arm/robot2.jpeg", "images/robotic_arm/robot3.png", "/images/robotic_arm/robot3.mp4"]} />
         </div>
