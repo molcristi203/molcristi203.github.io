@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className={`${lobster.className} antialiased`}>
         <Banner/>
         {children}
-        <div className="bh-yellow lg:h-28 md:h-28 sm:h-28 h-14 border-b-2 border-black">
+        <div className="bh-yellow lg:h-28 md:h-28 sm:h-28 h-14 border-b-2 border-black text-[#222]">
         </div>
       </body>
     </html>
