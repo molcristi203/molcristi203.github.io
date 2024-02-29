@@ -14,7 +14,7 @@ export default function CarSales() {
                     src={"/images/car_sales/1.png"}
                     width={2000}
                     height={2000}
-                    alt="Robotic arm"
+                    alt="Car sales"
                     className="h-full object-scale-down"
                     key={1}
                 />
@@ -24,7 +24,7 @@ export default function CarSales() {
                     src={"/images/car_sales/3.png"}
                     width={2000}
                     height={2000}
-                    alt="Robotic arm"
+                    alt="Car sales"
                     className="h-full object-scale-down"
                     key={2}
                 />
@@ -38,7 +38,7 @@ export default function CarSales() {
                     src={"/images/car_sales/2.png"}
                     width={2000}
                     height={2000}
-                    alt="Robotic arm"
+                    alt="Car sales"
                     className="h-full object-scale-down"
                     key={5}
                 />
@@ -48,7 +48,7 @@ export default function CarSales() {
                     src={"/images/car_sales/4.png"}
                     width={2000}
                     height={2000}
-                    alt="Robotic arm"
+                    alt="Car sales"
                     className="h-full object-scale-down"
                     key={6}
                 />
@@ -61,7 +61,7 @@ export default function CarSales() {
                     src={"/images/car_sales/4.png"}
                     width={2000}
                     height={2000}
-                    alt="Robotic arm"
+                    alt="Car sales"
                     className="h-full object-scale-down"
                     key={8}
                 />
