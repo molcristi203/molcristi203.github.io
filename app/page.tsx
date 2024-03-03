@@ -41,7 +41,8 @@ export default function Home() {
         <Card title="AmongFOL" image_path="/images/amongfol/among1.png" link="/amongfol"/>
         <Card title="OpenGL App" image_path="/images/opengl/1.png" link="/opengl"/>
         <Card title="Benchmarking App" image_path="/images/benchmark/1.png" link="/benchmark"/>
-        <div className="w-full h-full bg-white lg:col-span-1 md:col-span-1 lg:block md:block sm:hidden hidden"></div>
+        <Card title="Search Agent Project" image_path="/images/ai_agent/image.png" link="/aiagent"/>
+        {/* <div className="w-full h-full bg-white lg:col-span-1 md:col-span-1 lg:block md:block sm:hidden hidden"></div> */}
       </div>
       <Navigation elements={elements.current}/>
     </div>
