@@ -6,6 +6,7 @@ import Navigation from "@/app/navigation";
 import { useRef } from "react";
 import Section from "@/app/section";
 import { blippo } from "./fonts";
+import Image from "next/image";
 
 export default function Home() {
   const elements = useRef<HTMLElement[]>([]);
@@ -13,7 +14,18 @@ export default function Home() {
   return (
     <div>
       <SectionTitle ref={el => el && elements.current.push(el)} title="About me" backButton={false}/>
-      {/* <Section text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, tenetur." image="/firmbee-com-SpVHcbuKi6E-unsplash.jpg"/> */}
+      <Section left={[
+        <p key={0}>Computer science student in 3rd year at Technical University of Cluj Napoca with passion for software development and hardware engineering. I have a keen interest in trying new things and experimenting with various technologies that spark my curiosity.</p>
+      ]} right={[
+        <Image
+          src={"/poza-profil.jpg"}
+          width={2000}
+          height={2000}
+          alt="Profile photo"
+          className="w-full h-full object-contain"
+          key={0}
+         />
+      ]} noPaddingRight = {true}/>
       <SectionTitle ref={el => el && elements.current.push(el)} title="Links" backButton={false}/>
       <div className={`bg-white lg:h-28 md:h-28 sm:h-28 h-14 border-b-2 border-black flex flex-row gap-4 sm:p-8 md:p-8 lg:p-8 p-4 items-center text-black lg:text-3xl md:text-2xl sm:text-3xl text-lg ${blippo.variable} font-sans antialiased`}>
           <a href="https://www.linkedin.com/in/cristi-moldovan-8a199026b" target="_blank">LinkedIn</a>
