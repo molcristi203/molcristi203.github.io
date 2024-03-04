@@ -31,6 +31,7 @@ export default function Home() {
           <a href="https://www.linkedin.com/in/cristi-moldovan-8a199026b" target="_blank">LinkedIn</a>
           <a href="https://github.com/molcristi203" target="_blank">GitHub</a>
           <a href="https://www.artstation.com/molcristi" target="_blank">ArtStation</a>
+          <a href="https://drive.google.com/file/d/13Bxi0SaxCUQaPEUuvFGHKQ6YtuDf7bXV/view?usp=sharing" target="_blank">CV</a>
         </div>
       <SectionTitle ref={el => el && elements.current.push(el)} title="Projects" backButton={false}/>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 bg-black gap-0.5 border-b-2 border-black">
