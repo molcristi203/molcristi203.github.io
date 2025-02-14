@@ -25,7 +25,7 @@ export function Card({ title, image_path, link, external_link } : CardProps) {
 
     return (
         external_link ?
-        (<a href={link ? link : "#"} target="_blank">
+        (<a href={link ? link : "#"} target="_blank" className="bg-white">
             {content}
         </a> )
         :
