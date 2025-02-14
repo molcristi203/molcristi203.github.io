@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <SectionTitle ref={el => { if (el) elements.current.push(el); }} title="About me" backButton={false}/>
       <Section left={[
-        <p key={0}>Computer science student in 3rd year at Technical University of Cluj Napoca with passion for software development and hardware engineering. I have a keen interest in trying new things and experimenting with various technologies that spark my curiosity.</p>
+        <p key={0}>Computer science student in 4th year at Technical University of Cluj Napoca with passion for software development and hardware engineering. I have a keen interest in trying new things and experimenting with various technologies that spark my curiosity.</p>
       ]} right={[
         <Image
           src={"/poza-profil.jpg"}
@@ -43,6 +43,8 @@ export default function Home() {
         <Card title="OpenGL App" image_path="/images/opengl/1.png" link="/opengl"/>
         <Card title="Benchmarking App" image_path="/images/benchmark/1.png" link="/benchmark"/>
         <Card title="Search Agent Project" image_path="/images/ai_agent/image.png" link="/aiagent"/>
+        <Card title="teleson.ro" image_path="/images/teleson/teleson.png" link="https://teleson.ro" external_link/>
+        <Card title="eco.teleson.ro" image_path="/images/teleson/eco_teleson.png" link="https://eco.teleson.ro" external_link/>
         {/* <div className="w-full h-full bg-white lg:col-span-1 md:col-span-1 lg:block md:block sm:hidden hidden"></div> */}
       </div>
       <Navigation elements={elements.current}/>
