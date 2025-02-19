@@ -12,7 +12,7 @@ export default function Home() {
   const elements = useRef<HTMLElement[]>([]);
 
   return (
-    <div>
+    <div className="">
       <SectionTitle ref={el => { if (el) elements.current.push(el); }} title="About me" backButton={false}/>
       <Section left={[
         <p key={0}>Computer science student in 4th year at Technical University of Cluj Napoca with passion for software development and hardware engineering. I have a keen interest in trying new things and experimenting with various technologies that spark my curiosity.</p>
@@ -32,7 +32,7 @@ export default function Home() {
           <a href="https://github.com/molcristi203" target="_blank">GitHub</a>
           <a href="https://www.artstation.com/molcristi" target="_blank">ArtStation</a>
           <a href="https://drive.google.com/file/d/13Bxi0SaxCUQaPEUuvFGHKQ6YtuDf7bXV/view?usp=sharing" target="_blank">CV</a>
-        </div>
+      </div>
       <SectionTitle ref={el => { if (el) elements.current.push(el); }} title="Projects" backButton={false}/>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 bg-black gap-0.5 border-b-2 border-black">
         <Card title="Portfolio" image_path="/banner.png" link="/"/>
@@ -45,7 +45,9 @@ export default function Home() {
         <Card title="Search Agent Project" image_path="/images/ai_agent/image.png" link="/aiagent"/>
         <Card title="teleson.ro" image_path="/images/teleson/teleson.png" link="https://teleson.ro" external_link/>
         <Card title="eco.teleson.ro" image_path="/images/teleson/eco_teleson.png" link="https://eco.teleson.ro" external_link/>
-        {/* <div className="w-full h-full bg-white lg:col-span-1 md:col-span-1 lg:block md:block sm:hidden hidden"></div> */}
+        <Card title="ASL Classifier" image_path="/images/asl_classifier/ASL Classifier.png" link="/asl_classifier"/>
+        <Card title="Road Markings Detection" image_path="/images/road_markings/road_markings.png" link="/road_markings"/>
+        <Card title="Energy Management" image_path="/images/energy_management/energy_management.png" link="/energy_management"/>
       </div>
       <Navigation elements={elements.current}/>
     </div>
