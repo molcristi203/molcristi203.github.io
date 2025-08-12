@@ -1,7 +1,8 @@
 import Image from "next/image";
-import SectionTitle from "../section_title";
-import Section from "@/app/section"
-import Gallery from "../gallery";
+import SectionTitle from "../components/section_title";
+import Section from "@/app/components/section"
+import Gallery from "../components/gallery";
+import { CustomImage } from "../components/custom_image";
 
 export default function ASLClassifier()
 {
@@ -15,22 +16,16 @@ export default function ASLClassifier()
           <br/> Those images are classified using AdaBoost classifier. A from scratch implementation is used for classification and the ScikitLearn&apos;s implementation is used for comparison.
         </p>
       ]} right={[
-        <Image
-          src={"/images/asl_classifier/hand1.jpeg"}
-          width={2000}
-          height={2000}
-          alt="Hand"
-          className="h-full object-scale-down"
+        <CustomImage
+          src="images/asl_classifier/hand1.jpeg"
+          alt="Hand that represents the letter A in American Sign Language"
           key={1}
         />
       ]} />
       <Section left={[
-        <Image
-          src={"/images/asl_classifier/confusion_matrix.png"}
-          width={2000}
-          height={2000}
-          alt="Matrix"
-          className="h-full object-scale-down"
+        <CustomImage
+          src="images/asl_classifier/confusion_matrix.png"
+          alt="Confusion matrix presenting the performance of the classification model"
           key={2}
         />
       ]} right={[
@@ -43,12 +38,9 @@ export default function ASLClassifier()
           The resulting metrics of my own implementation together with the results from the classification using the ScikitLearn&apos;s implementation.
         </p>
       ]} right={[
-        <Image
-          src={"/images/asl_classifier/Tabel.png"}
-          width={2000}
-          height={2000}
-          alt="Table"
-          className="h-full object-scale-down"
+        <CustomImage
+          src="images/asl_classifier/Tabel.png"
+          alt="Table containing the performance metrics of the model"
           key={5}
         />
       ]} />

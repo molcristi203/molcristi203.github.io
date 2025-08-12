@@ -1,7 +1,8 @@
-import SectionTitle from "@/app/section_title";
-import Section from "@/app/section"
-import Gallery from "@/app/gallery";
+import SectionTitle from "@/app/components/section_title";
+import Section from "@/app/components/section"
+import Gallery from "@/app/components/gallery";
 import Image from "next/image";
+import { CustomImage } from "../components/custom_image";
 
 export default function AIAgent() {
     return (
@@ -15,12 +16,9 @@ export default function AIAgent() {
                     <li>Solutions for the Eight Puzzle problem.</li>
                 </ul>
             ]} right={[
-                <Image
-                    src={"/images/ai_agent/image.png"}
-                    width={2000}
-                    height={2000}
-                    alt="AmongFOL"
-                    className="h-full object-scale-down"
+                <CustomImage
+                    src="images/ai_agent/images.png"
+                    alt="Application window containing Pacman in a maze"
                     key={1}
                 />
             ]}/>

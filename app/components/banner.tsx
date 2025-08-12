@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import ExportedImage from "next-image-export-optimizer";
 
 export default function Banner() {
     const parallaxRef = useRef(null);
@@ -18,14 +19,14 @@ export default function Banner() {
 
     return (
     <div className="w-full h-screen box-content border-b-2 border-black">
-      <Image 
-        src="/banner.png"
-        width={2000}
-        height={2000}
-        alt="Banner picture"
-        className="w-full h-screen object-cover box-content"
+      <ExportedImage
+        src={"images/banner.png"}
+        alt="Abstract image containing colored semicircles and squares"
+        width={500}
+        height={500}
         id="banner"
         ref={parallaxRef}
+        className="w-full h-screen object-cover box-content"
       />
     </div>
     );

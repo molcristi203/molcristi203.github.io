@@ -1,14 +1,15 @@
-import SectionTitle from "@/app/section_title";
-import Section from "@/app/section"
-import Gallery from "@/app/gallery";
+import SectionTitle from "@/app/components/section_title";
+import Section from "@/app/components/section"
+import Gallery from "@/app/components/gallery";
 import Image from "next/image";
+import { CustomImage } from "../components/custom_image";
 
 export default function RobotArm() {
     return (
         <div>
             <SectionTitle title="Robotic Arm" backButton={true}/>
-            <Section left={[<p key={0}>Arduino project built by in team of 2 based on <a href="https://howtomechatronics.com/tutorials/arduino/diy-arduino-robot-arm-with-smartphone-control/" target="_blank" className="text-[#fec527]">this project.</a></p>,
-                <p key={1}>It features:</p>, 
+            <Section left={[<p key={0}>Arduino project built by a team of 2 based on <a href="https://howtomechatronics.com/tutorials/arduino/diy-arduino-robot-arm-with-smartphone-control/" target="_blank" className="text-[#fec527]">this project.</a></p>,
+                <p key={1}>It features:</p>,
                 <ul className="list-disc ml-8" key={2}>
                     <li>3D printed parts</li>
                     <li>6 servo motors for the 6 joints of the arm</li>
@@ -18,22 +19,16 @@ export default function RobotArm() {
                     <li>Arduino Mega for the robot logic</li>
                 </ul>
             ]} right={[
-                <Image
-                    src={"/images/robotic_arm/robot.jpg"}
-                    width={2000}
-                    height={2000}
-                    alt="Robotic arm"
-                    className="h-full object-scale-down"
+                <CustomImage
+                    src="images/robotic_arm/robot.jpg"
+                    alt="Yellow robotic arm on a table holding a cube surrounded by electronics"
                     key={3}
                 />
             ]}/>
             <Section left={[
-                <Image
-                    src={"images/robotic_arm/robot3.png"}
-                    width={2000}
-                    height={2000}
-                    alt="App"
-                    className="h-full object-scale-down"
+                <CustomImage
+                    src="images/robotic_arm/robot3.png"
+                    alt="App window containing the sliders for controllingthe robot"
                     key={4}
                 />
             ]} right={[

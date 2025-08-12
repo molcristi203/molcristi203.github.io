@@ -3,7 +3,7 @@
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { forwardRef } from "react";
-import { blippo } from "./fonts";
+import { blippo } from "../fonts";
 
 interface Props {
     title : string;

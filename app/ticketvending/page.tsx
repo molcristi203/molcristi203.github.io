@@ -1,6 +1,6 @@
-import SectionTitle from "@/app/section_title";
-import Section from "@/app/section"
-import Gallery from "@/app/gallery";
+import SectionTitle from "@/app/components/section_title";
+import Section from "@/app/components/section"
+import Gallery from "@/app/components/gallery";
 
 export default function TicketVending() {
     return (
