@@ -38,3 +38,5 @@ next-env.d.ts
 next.config2.mjs
 
 api2
+
+**/nextImageExportOptimizer/*

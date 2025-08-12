@@ -1,4 +1,4 @@
-import SectionTitle from "../section_title";
+import SectionTitle from "../components/section_title";
 
 export default function RoadMarkings()
 {

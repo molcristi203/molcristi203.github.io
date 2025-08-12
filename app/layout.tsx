@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { lobster } from "./fonts";
-import Banner from "./banner";
+import Banner from "./components/banner";
 
 export const metadata: Metadata = {
   title: "Portfolio"

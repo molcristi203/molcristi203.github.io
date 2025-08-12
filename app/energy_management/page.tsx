@@ -1,7 +1,8 @@
-import SectionTitle from "../section_title";
-import Section from "@/app/section"
-import Gallery from "../gallery";
+import SectionTitle from "../components/section_title";
+import Section from "@/app/components/section"
+import Gallery from "../components/gallery";
 import Image from "next/image";
+import { CustomImage } from "../components/custom_image";
 
 export default function EnergyManagement()
 {
@@ -13,23 +14,17 @@ export default function EnergyManagement()
           Energy management app based on microservice architecture. It consists of a web application that provides functionality to store in databases users, devices, a way to monitor the consumption of the devices and a chat for clients to communicate with admins.
         </p>
       ]} right={[
-        <Image
-          src={"/images/energy_management/energy_management.png"}
-          width={2000}
-          height={2000}
-          alt="Homepage"
-          className="h-full object-scale-down"
+        <CustomImage
+          src="images/energy_management/energy_management.png"
+          alt="Home page containing multiple links and an image of electricity poles"
           key={1}
         />
       ]}
       />
       <Section left={[
-        <Image
-          src={"/images/energy_management/energy_management2.png"}
-          width={2000}
-          height={2000}
-          alt="Users page"
-          className="h-full object-scale-down"
+        <CustomImage
+          src="images/energy_management/energy_management2.png"
+          alt="Web page containing different fields, buttons and tables"
           key={2}
         />
       ]} right={[
@@ -42,23 +37,17 @@ export default function EnergyManagement()
           The interface for devices management provides the ADMINS a way to create, edit and remove devices from users.
         </p>
       ]} right={[
-        <Image
-          src={"/images/energy_management/energy_management3.png"}
-          width={2000}
-          height={2000}
-          alt="Devices page"
-          className="h-full object-scale-down"
+        <CustomImage
+          src="images/energy_management/energy_management3.png"
+          alt="Web page containing different fields, buttons and tables"
           key={5}
         />
       ]}
       />
       <Section left={[
-        <Image
-          src={"/images/energy_management/energy_management4.png"}
-          width={2000}
-          height={2000}
-          alt="Chat page"
-          className="h-full object-scale-down"
+        <CustomImage
+          src="images/energy_management/energy_management4.png"
+          alt="Web page containing different fields, buttons and tables"
           key={6}
         />
       ]} right={[

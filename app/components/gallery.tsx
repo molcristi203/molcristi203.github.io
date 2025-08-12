@@ -3,6 +3,7 @@
 import Image from "next/image"
 import path from "path";
 import { useEffect, useState, useRef } from 'react';
+import ExportedImage from "next-image-export-optimizer";
 
 interface GalleryProps {
     paths : string[]
@@ -11,7 +12,7 @@ interface GalleryProps {
 export default function Gallery({paths} : GalleryProps) {
     const [image, setImage] = useState("data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=");
     const [video, setVideo] = useState("");
-    const [visible, setVisible] = useState("none");   
+    const [visible, setVisible] = useState("none");
     const videoRef = useRef<HTMLVideoElement>(null);
 
     function changeImage(img : string) {
@@ -26,7 +27,6 @@ export default function Gallery({paths} : GalleryProps) {
             setVisible("image");
             setImage(img);
         }
-        
     }
 
     return (
@@ -37,10 +37,10 @@ export default function Gallery({paths} : GalleryProps) {
                     let extension = path.extname(image).toLowerCase();
                     if (extension === ".jpg" || extension === ".png" || extension === ".jpeg") {
                         return (<div key={index} className="lg:min-w-60 md:min-w-60 md:h-60 lg:h-60 sm:min-w-80 sm:h-80 min-w-40 h-40 border-black border-r-2 last:border-r-0 cursor-pointer opacity-75 hover:opacity-100">
-                            <Image
+                            <ExportedImage
                                 src={image}
-                                width={2000}
-                                height={2000}
+                                width={500}
+                                height={500}
                                 alt=""
                                 className="object-scale-down w-full h-full"
                                 onClick={() => {changeImage(image)}}
@@ -57,21 +57,20 @@ export default function Gallery({paths} : GalleryProps) {
             }
             </div>
             <div className={`w-full h-screen border-black border-b-2 ${visible === "image" ? "block" : "hidden"}`}>
-                <Image
+                <ExportedImage
                     src={image}
-                    width={2000}
-                    height={2000}
+                    width={500}
+                    height={500}
                     alt=""
                     className="w-full h-full object-scale-down"
                 />
             </div>
             <div className={`w-full h-screen border-black border-b-2 ${visible === "video" ? "block" : "hidden"}`}>
                 <video controls className="w-full h-full" preload="auto" muted ref={videoRef}>
-                    <source src={video} type="video/mp4" />
+                    <source src={video != "" ? video : undefined} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
         </div>
-        
     );
 }
