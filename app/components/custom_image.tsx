@@ -7,8 +7,6 @@ interface Props {
     key : number;
 };
 
-
-
 export function CustomImage({src, alt, additional_classes, key} : Props)
 {
     return (
