@@ -1,8 +1,8 @@
 import SectionTitle from "../components/section_title";
 import Section from "@/app/components/section"
 import Gallery from "../components/gallery";
-import Image from "next/image";
-import { CustomImage } from "../components/custom_image";
+import SingleSection from "../components/single_section";
+import CustomImage from "../components/custom_image";
 
 export default function EnergyManagement()
 {
@@ -55,7 +55,10 @@ export default function EnergyManagement()
           A chatting system is implemented within the application. CLIENTS can start a chat and wait for an ADMIN to accept the chat, after that the chat window is created and CLIENTS and ADMINS can send and receive messages.
         </p>
       ]} />
-      <Gallery paths={["/images/energy_management/energy_management.png", "/images/energy_management/energy_management2.png", "/images/energy_management/energy_management3.png", "/images/energy_management/energy_management4.png"]}/>
+      <SingleSection>
+        <a href="https://github.com/molcristi203/energy-management" target="_blank" className="text-bh_yellow">GitHub Repository</a>
+      </SingleSection>
+      <Gallery paths={["images/energy_management/energy_management.png", "images/energy_management/energy_management2.png", "images/energy_management/energy_management3.png", "images/energy_management/energy_management4.png"]}/>
     </div>
   );
 }

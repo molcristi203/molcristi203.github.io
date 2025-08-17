@@ -1,32 +1,21 @@
 "use client"
 
-import { Card } from "@/app/components/card";
+import Card from "@/app/components/card";
 import SectionTitle from "@/app/components/section_title";
 import Navigation from "@/app/components/navigation";
 import { useRef } from "react";
 import Section from "@/app/components/section";
 import { blippo } from "./fonts";
-import Image from "next/image";
 import ExportedImage from "next-image-export-optimizer";
+import SingleSection from "./components/single_section";
 
 export default function Home() {
   const elements = useRef<HTMLElement[]>([]);
 
   return (
     <div className="">
-      <SectionTitle ref={el => { if (el) elements.current.push(el); }} title="About me" backButton={false}/>
-      <Section left={[
-        <p key={0}>Computer science student in 4th year at Technical University of Cluj Napoca with passion for software development and hardware engineering. I have a keen interest in trying new things and experimenting with various technologies that spark my curiosity.</p>
-      ]} right={[
-        <ExportedImage
-          src={"images/poza-profil.jpg"}
-          width={500}
-          height={500}
-          alt="Profile photo"
-          className="w-full h-full object-contain"
-          key={0}
-         />
-      ]} noPaddingRight = {true}/>
+      <SectionTitle ref={el => { if (el) elements.current.push(el); }} title="About" backButton={false}/>
+        <SingleSection>Computer science graduate and master student at the Artificial Inteligence and Vision master at Technical University of Cluj Napoca with passion for software development and hardware engineering. I have a keen interest in trying new things and experimenting with various technologies that spark my curiosity.</SingleSection>
       <SectionTitle ref={el => { if (el) elements.current.push(el); }} title="Links" backButton={false}/>
       <div className={`bg-white lg:h-28 md:h-28 sm:h-28 h-14 border-b-2 border-black flex flex-row gap-4 sm:p-8 md:p-8 lg:p-8 p-4 items-center text-black lg:text-3xl md:text-2xl sm:text-3xl text-lg ${blippo.variable} font-sans antialiased`}>
           <a href="https://www.linkedin.com/in/cristi-moldovan-8a199026b" target="_blank">LinkedIn</a>
@@ -47,8 +36,10 @@ export default function Home() {
         <Card title="teleson.ro" image_path="images/teleson/teleson.png" link="https://teleson.ro" external_link alt="Home page containing a logo and different links"/>
         <Card title="eco.teleson.ro" image_path="images/teleson/eco_teleson.png" link="https://eco.teleson.ro" external_link alt="Home page containing a logo, different links and an image of solar panels in the sun"/>
         <Card title="ASL Classifier" image_path="images/asl_classifier/ASL Classifier.png" link="/asl_classifier" alt="Image of a face next to text on a light blue background"/>
-        <Card title="Road Markings Detection" image_path="images/road_markings/road_markings.png" link="/road_markings" alt="Image of a road containing multiple vehicles"/>
+        <Card title="Road Markings Detection" image_path="images/road_markings/road4.jpg" link="/road_markings" alt="Image of a road with a single road marking, taken from a car dash cam"/>
         <Card title="Energy Management" image_path="images/energy_management/energy_management.png" link="/energy_management" alt="Home page containing multiple links and an image of electricity poles"/>
+        <Card title="LED Controller" image_path="images/led_controller/static.jpg" link="/led_controller" alt="RGB color wheel"/>
+        <Card title="Hand Drawn Logic Circuits Classification" image_path="images/logic_circuits/ComponentClassification.jpg" link="/logic_circuits" alt="Diagram containing logic circuit elements inside bounding boxes"/>
       </div>
       <Navigation elements={elements.current}/>
     </div>

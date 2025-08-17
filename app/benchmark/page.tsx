@@ -1,8 +1,8 @@
 import SectionTitle from "@/app/components/section_title";
 import Section from "@/app/components/section"
 import Gallery from "@/app/components/gallery";
-import Image from "next/image";
-import { CustomImage } from "../components/custom_image";
+import SingleSection from "../components/single_section";
+import CustomImage from "../components/custom_image";
 
 export default function Benchmark() {
     return (
@@ -68,7 +68,10 @@ export default function Benchmark() {
                 the storage devices such as the SSD/HDD that is in the computer and on the USB stick that is
                 external.</p>
             ]} reverse={true}/>
-            <Gallery paths={["/images/benchmark/1.png", "/images/benchmark/2.png", "/images/benchmark/3.png", "/images/benchmark/4.png", "/images/benchmark/5.png"]} />
+            <SingleSection>
+                <a href="https://github.com/molcristi203/benchmark-app" target="_blank" className="text-bh_yellow">GitHub Repository</a>
+            </SingleSection>
+            <Gallery paths={["images/benchmark/1.png", "images/benchmark/2.png", "images/benchmark/3.png", "images/benchmark/4.png", "images/benchmark/5.png"]} />
         </div>
     );
 }

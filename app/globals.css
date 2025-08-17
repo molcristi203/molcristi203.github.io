@@ -3,21 +3,6 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --bh-blue: #0071E4;
-  --bh-red: #f5363c;
-  --bh-yelow: #fec527;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
 }
 
 body {
@@ -28,18 +13,6 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-.bh-red {
-  background-color: var(--bh-red);
-}
-
-.bh-blue {
-  background-color: var(--bh-blue);
-}
-
-.bh-yellow {
-  background-color: var(--bh-yelow);
 }
 
 .custom-grid {

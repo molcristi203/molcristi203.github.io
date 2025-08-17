@@ -22,8 +22,8 @@ export default function Banner() {
       <ExportedImage
         src={"images/banner.png"}
         alt="Abstract image containing colored semicircles and squares"
-        width={500}
-        height={500}
+        width={2000}
+        height={2000}
         id="banner"
         ref={parallaxRef}
         className="w-full h-screen object-cover box-content"

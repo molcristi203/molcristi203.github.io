@@ -1,8 +1,8 @@
-import Image from "next/image";
+import SingleSection from "../components/single_section";
 import SectionTitle from "../components/section_title";
 import Section from "@/app/components/section"
 import Gallery from "../components/gallery";
-import { CustomImage } from "../components/custom_image";
+import CustomImage from "../components/custom_image";
 
 export default function ASLClassifier()
 {
@@ -44,7 +44,10 @@ export default function ASLClassifier()
           key={5}
         />
       ]} />
-      <Gallery paths={["/images/asl_classifier/hand1.jpeg", "/images/asl_classifier/confusion_matrix.png", "/images/asl_classifier/Tabel.png"]}/>
+      <SingleSection>
+        <a href="https://github.com/molcristi203/american-sign-language-classifier" target="_blank" className="text-bh_yellow">GitHub Repository</a>
+      </SingleSection>
+      <Gallery paths={["images/asl_classifier/hand1.jpeg", "images/asl_classifier/confusion_matrix.png", "images/asl_classifier/Tabel.png"]}/>
     </div>
   );
 }

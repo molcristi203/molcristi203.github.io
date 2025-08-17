@@ -1,15 +1,15 @@
 import SectionTitle from "@/app/components/section_title";
 import Section from "@/app/components/section"
 import Gallery from "@/app/components/gallery";
-import Image from "next/image";
-import { CustomImage } from "../components/custom_image";
+import CustomImage from "../components/custom_image";
+import SingleSection from "../components/single_section";
 
 export default function AmongFOL() {
     return (
         <div>
             <SectionTitle title="AmongFOL" backButton={true}/>
             <Section left={[
-                <p key={0}>Among FOL is a program written in python that makes use of mace4 to give a probability of the roles of the players based on messages written in First Order Logic. <br/> Similar to knights and knaves, there are two roles, crewmates(which can only tell the truth) and imposters(which can both tell the truth and lie). A random game is generated where a random player is assigned as imposter and the others are crewmates. <br/> The messages are randomly generated for each player and can contain information about themselves or the other players. Based on this, mace4 will generate a statistic about the roles of each player and let the user decide who they will vote.</p>
+                <p key={0}>Among FOL is a program written in Python that makes use of Mace4 to give a probability of the roles of the players based on messages written in First Order Logic. <br/> Similar to knights and knaves, there are two roles, crewmates(which can only tell the truth) and imposters(which can both tell the truth and lie). A random game is generated where a random player is assigned as imposter and the others are crewmates. <br/> The messages are randomly generated for each player and can contain information about themselves or the other players. Based on this, mace4 will generate a statistic about the roles of each player and let the user decide who they will vote.</p>
             ]} right={[
                 <CustomImage
                     src="images/amongfol/among1.png"
@@ -35,7 +35,10 @@ export default function AmongFOL() {
                     key={5}
                 />
             ]}/>
-            <Gallery paths={["/images/amongfol/among1.png", "/images/amongfol/1.png", "/images/amongfol/2.png"]} />
+            <SingleSection>
+                <a href="https://github.com/molcristi203/AmongFOL" target="_blank" className="text-bh_yellow">GitHub Repository</a>
+            </SingleSection>
+            <Gallery paths={["images/amongfol/among1.png", "images/amongfol/1.png", "images/amongfol/2.png"]} />
         </div>
     );
 }

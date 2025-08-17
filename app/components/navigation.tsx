@@ -8,23 +8,31 @@ interface NavProps {
 
 export default function Navigation({elements} : NavProps) {
     const [fill, setFill] = useState(0);
+    const [positions, setPositions] = useState<number[]>([]);
 
-    const handleScroll = () => {
+    const updatePositions = () => {
         const winScroll = document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (winScroll / height) * 100;
-        setFill(scrolled);
+
+        setFill((winScroll / height) * 100);
+
+        const newPositions = elements.map((element) => {
+            const elementOffsetTop = element.offsetTop;
+            return (elementOffsetTop / height) * 100;
+        });
+
+        setPositions(newPositions);
     };
 
     useEffect(() => {
-        handleScroll();
-
-        window.addEventListener("scroll", handleScroll);
-
+        updatePositions();
+        window.addEventListener("scroll", updatePositions);
+        window.addEventListener("resize", updatePositions);
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("scroll", updatePositions);
+            window.removeEventListener("resize", updatePositions);
         };
-    }, []);
+    }, [elements]);
 
     return (
         <nav className="fixed right-4 top-[12.5%] sm:w-[1%] w-[2%] h-3/4 bg-white border-black border-2">
@@ -49,7 +57,7 @@ export default function Navigation({elements} : NavProps) {
 
             <div style={{height: `${fill}%`}} className="w-full bg-[#fec527] relative z-[2]">
 
-            </div>      
+            </div>
         </nav>
     );
 }

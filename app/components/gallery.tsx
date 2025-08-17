@@ -42,7 +42,7 @@ export default function Gallery({paths} : GalleryProps) {
                                 width={500}
                                 height={500}
                                 alt=""
-                                className="object-scale-down w-full h-full"
+                                className="object-contain w-full h-full"
                                 onClick={() => {changeImage(image)}}
                             />
                         </div>);
@@ -56,13 +56,13 @@ export default function Gallery({paths} : GalleryProps) {
                 })
             }
             </div>
-            <div className={`w-full h-screen border-black border-b-2 ${visible === "image" ? "block" : "hidden"}`}>
+            <div className={`w-full h-[50vh] border-black border-b-2 ${visible === "image" ? "block" : "hidden"}`}>
                 <ExportedImage
                     src={image}
                     width={500}
                     height={500}
                     alt=""
-                    className="w-full h-full object-scale-down"
+                    className="w-full h-full object-contain"
                 />
             </div>
             <div className={`w-full h-screen border-black border-b-2 ${visible === "video" ? "block" : "hidden"}`}>

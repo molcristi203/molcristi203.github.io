@@ -1,8 +1,8 @@
 import SectionTitle from "@/app/components/section_title";
 import Section from "@/app/components/section"
 import Gallery from "@/app/components/gallery";
-import Image from "next/image";
-import { CustomImage } from "../components/custom_image";
+import CustomImage from "../components/custom_image";
+import SingleSection from "../components/single_section";
 
 export default function CarSales() {
     return (
@@ -54,7 +54,10 @@ export default function CarSales() {
                     key={8}
                 />
             ]}/>
-            <Gallery paths={["/images/car_sales/1.png", "/images/car_sales/2.png", "/images/car_sales/3.png", "/images/car_sales/4.png", "/images/car_sales/5.png"]} />
+            <SingleSection>
+                <a href="https://github.com/molcristi203/car-sales-app" target="_blank" className="text-bh_yellow">GitHub Repository</a>
+            </SingleSection>
+            <Gallery paths={["images/car_sales/1.png", "images/car_sales/2.png", "images/car_sales/3.png", "images/car_sales/4.png", "images/car_sales/5.png"]} />
         </div>
     );
 }

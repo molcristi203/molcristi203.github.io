@@ -4,10 +4,9 @@ interface Props {
     src : string;
     alt : string;
     additional_classes? : string;
-    key : number;
 };
 
-export function CustomImage({src, alt, additional_classes, key} : Props)
+export default function CustomImage({src, alt, additional_classes} : Props)
 {
     return (
         <ExportedImage
@@ -15,8 +14,7 @@ export function CustomImage({src, alt, additional_classes, key} : Props)
             alt={alt}
             width={500}
             height={500}
-            className={`h-full object-scale-down w-full ${additional_classes}`}
-            key={key}
+            className={`h-full object-contain w-full ${additional_classes}`}
         />
     );
 }

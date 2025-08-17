@@ -1,8 +1,8 @@
 import SectionTitle from "@/app/components/section_title";
 import Section from "@/app/components/section"
 import Gallery from "@/app/components/gallery";
-import Image from "next/image";
-import { CustomImage } from "../components/custom_image";
+import CustomImage from "../components/custom_image";
+import SingleSection from "../components/single_section";
 
 export default function AmongFOL() {
     return (
@@ -17,7 +17,10 @@ export default function AmongFOL() {
                     key={1}
                 />
             ]}/>
-            <Gallery paths={["/images/opengl/1.png", "/images/opengl/2.jpg", "/images/opengl/3.jpg", "/images/opengl/4.jpg", "/images/opengl/5.jpg", "/images/opengl/6.jpg"]} />
+            <SingleSection>
+                <a href="https://github.com/molcristi203/opengl-project" target="_blank" className="text-bh_yellow">GitHub Repository</a>
+            </SingleSection>
+            <Gallery paths={["images/opengl/1.png", "images/opengl/2.jpg", "images/opengl/3.jpg", "images/opengl/4.jpg", "images/opengl/5.jpg", "images/opengl/6.jpg"]} />
         </div>
     );
 }
